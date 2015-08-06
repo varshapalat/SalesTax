@@ -16,7 +16,7 @@ public class ItemTest {
     public void computeSalesTaxWhenTaxableItem() {
         Item itemTwo = new Item("Music", "Unimported", 14.99);
 
-        assertEquals(.15, itemTwo.computeBasicSalesTax(), 0.05);
+        assertEquals(1.5, itemTwo.computeBasicSalesTax(), 0.05);
     }
 
     @Test
@@ -24,5 +24,12 @@ public class ItemTest {
         Item itemOne = new Item("Book", "Unimported", 12.49);
 
         assertEquals(0, itemOne.computeImportDuty(), 0.05);
+    }
+
+    @Test
+    public void computeImportDutyOnImportedItems() {
+        Item itemOne = new Item("Book", "Imported", 12.49);
+
+        assertEquals(0.6245, itemOne.computeImportDuty(), 0);
     }
 }

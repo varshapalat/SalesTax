@@ -14,10 +14,13 @@ public class Item {
         if(itemName.equalsIgnoreCase("Book") || itemName.equalsIgnoreCase("Food") || itemName.equalsIgnoreCase("Medicines"))
             return 0;
         else
-            return price * 0.01;
+            return price * 0.10;
     }
 
     public double computeImportDuty() {
-        return 0;
+        if(state.equalsIgnoreCase("Imported"))
+            return price * 0.05;
+        else
+            return 0;
     }
 }
