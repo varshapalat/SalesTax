@@ -18,4 +18,11 @@ public class ItemTest {
 
         assertEquals(.15, itemTwo.computeBasicSalesTax(), 0.05);
     }
+
+    @Test
+    public void computeImportDutyOnUnimportedItems() {
+        Item itemOne = new Item("Book", "Unimported", 12.49);
+
+        assertEquals(0, itemOne.computeImportDuty(), 0.05);
+    }
 }

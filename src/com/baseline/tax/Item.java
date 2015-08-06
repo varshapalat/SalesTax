@@ -17,7 +17,7 @@ public class Item {
             return price * 0.01;
     }
 
-    public void computeImportDuty() {
-
+    public double computeImportDuty() {
+        return 0;
     }
 }
