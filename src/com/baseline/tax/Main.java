@@ -6,7 +6,8 @@ public class Main {
         Item itemTwo = new Item("Music", "Unimported", 14.99);
         Item itemThree = new Item("Food", "Unimported", 0.85);
 
-        itemOne.computeBasicSalesTax();
-        itemOne.computeImportDuty();
+        System.out.print(itemOne.getItemName() + "\t" + itemOne.computeTotalPrice() + "\n");
+        System.out.print(itemTwo.getItemName() + "\t" + itemTwo.computeTotalPrice() + "\n");
+        System.out.print(itemThree.getItemName() + "\t" + itemThree.computeTotalPrice()+ "\n");
     }
 }
