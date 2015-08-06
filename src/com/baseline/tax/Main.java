@@ -6,5 +6,7 @@ public class Main {
         Item itemTwo = new Item("Music", "Unimported", 14.99);
         Item itemThree = new Item("Food", "Unimported", 0.85);
 
+        itemOne.computeBasicSalesTax();
+        itemOne.computeImportDuty();
     }
 }
