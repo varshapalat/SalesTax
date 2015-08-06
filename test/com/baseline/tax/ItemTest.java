@@ -19,4 +19,11 @@ public class ItemTest {
 
         assertEquals("Book", itemOne.getItemName());
     }
+
+    @Test
+    public void findTheTotalTaxOnEachItem() {
+        Item itemOne = new Item("Book", "Unimported", 12.49);
+
+        assertEquals(0, itemOne.computeTax(), 0);
+    }
 }

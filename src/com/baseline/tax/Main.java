@@ -9,5 +9,9 @@ public class Main {
         System.out.print(itemOne.getItemName() + "\t" + itemOne.computeTotalPrice() + "\n");
         System.out.print(itemTwo.getItemName() + "\t" + itemTwo.computeTotalPrice() + "\n");
         System.out.print(itemThree.getItemName() + "\t" + itemThree.computeTotalPrice()+ "\n");
+        double totalSalesTax = itemOne.computeTax() + itemOne.computeTax() + itemThree.computeTax();
+        System.out.print("Sales Taxes: " + totalSalesTax + "\n");
+        double totalAmount = itemOne.computeTotalPrice() + itemTwo.computeTotalPrice() + itemThree.computeTotalPrice();
+        System.out.print("Total: " + totalAmount + "\n");
     }
 }

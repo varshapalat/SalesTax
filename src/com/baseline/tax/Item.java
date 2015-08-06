@@ -33,4 +33,8 @@ public class Item {
     public String getItemName() {
         return itemName;
     }
+
+    public double computeTax() {
+        return this.computeImportDuty() + this. computeBasicSalesTax();
+    }
 }
